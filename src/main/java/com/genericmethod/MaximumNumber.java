@@ -11,6 +11,7 @@ public class MaximumNumber extends FindMaximumNumber
     {
         System.out.println("Maximum Number Problem\n");
         Scanner scanner = new Scanner(System.in);
+        //Integer Part
         System.out.println("Enter Number A");
         Integer a = scanner.nextInt();
         System.out.println("Enter Number B");
@@ -20,5 +21,15 @@ public class MaximumNumber extends FindMaximumNumber
         FindMaximumNumber find = new FindMaximumNumber();
         //calling FindMaximumNumber function using object to calculate the Maximum Integer
         find.findMaxInteger(a , b, c);
+
+        //Float Part
+        System.out.println("Enter Number D");
+        Float d = scanner.nextFloat();
+        System.out.println("Enter Number E");
+        Float e = scanner.nextFloat();
+        System.out.println("Enter Number F");
+        Float f = scanner.nextFloat();
+        //calling FindMaximumNumber function using object to calculate the Maximum Integer
+        find.findMaxFloat(d , e , f);
     }
 }
