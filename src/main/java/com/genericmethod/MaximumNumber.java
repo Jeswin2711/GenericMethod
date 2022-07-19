@@ -19,7 +19,7 @@ public class MaximumNumber extends FindMaximumNumber
         System.out.println("Enter Number C");
         Integer c = scanner.nextInt();
         FindMaximumNumber find = new FindMaximumNumber();
-        //calling FindMaximumNumber function using object to calculate the Maximum Integer
+        //calling findMaxInteger function in class FindMaximumNumber using object to calculate the Maximum Integer
         find.findMaxInteger(a , b, c);
 
         //Float Part
@@ -29,7 +29,17 @@ public class MaximumNumber extends FindMaximumNumber
         Float e = scanner.nextFloat();
         System.out.println("Enter Number F");
         Float f = scanner.nextFloat();
-        //calling FindMaximumNumber function using object to calculate the Maximum Integer
+        //calling findMaxFloat function in class FindMaximumNumber using object to calculate the Maximum Float
         find.findMaxFloat(d , e , f);
+
+        //String Part
+        System.out.println("Enter String G");
+        String g = scanner.next();
+        System.out.println("Enter String H");
+        String h = scanner.next();
+        System.out.println("Enter String I");
+        String i = scanner.next();
+        //calling findMaxString function in class FindMaximumNumber using object to calculate the Maximum String
+        find.findMaxString(g , h , i);
     }
 }
