@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class MaximumNumber extends FindMaximumNumber
 {
+    /*
+    Main Function to Get Values from User and to pass to the respective Function using Objects...
+     */
     public static void main(String[] args)
     {
         System.out.println("Maximum Number Problem\n");
@@ -15,6 +18,7 @@ public class MaximumNumber extends FindMaximumNumber
         System.out.println("Enter Number C");
         Integer c = scanner.nextInt();
         FindMaximumNumber find = new FindMaximumNumber();
+        //calling FindMaximumNumber function using object to calculate the Maximum Integer
         find.findMaxInteger(a , b, c);
     }
 }

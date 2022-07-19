@@ -2,6 +2,9 @@ package com.genericmethod;
 
 public class FindMaximumNumber
 {
+    /*
+    Function to Find the Maximum Integer Value b/w  a, b  and c
+     */
     void findMaxInteger(Integer a , Integer b ,Integer c)
     {
         if (a.compareTo(b) > 0 && a.compareTo(c) > 0)
