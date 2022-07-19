@@ -2,7 +2,7 @@ package com.genericmethod;
 
 import java.util.Scanner;
 
-public class MaximumNumber
+public class MaximumNumber extends GenericClass
 {
     /*
     Main Function to Get Values from User and to pass to the respective Function using Objects...
@@ -22,17 +22,20 @@ public class MaximumNumber
                 case 1:
                     System.out.println("Enter three Value of Integer to Find Max Value");
                     //calling CalculateMax generic funtion to calculate the maximum value
-                    System.out.println("The Maximum Integer Value " + calculateMax(scanner.nextInt(), scanner.nextInt(), scanner.nextInt())+"\n");
+                    GenericClass integerValue = new GenericClass(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
+                    System.out.println("\n");
                     break;
                 case 2:
                     System.out.println("Enter three Value of Float to Find Max Value");
                     //calling CalculateMax generic funtion to calculate the maximum value
-                    System.out.println("The Maximum Float Value " + calculateMax(scanner.nextFloat(), scanner.nextFloat(), scanner.nextFloat())+"\n");
+                    GenericClass floatValue = new GenericClass(scanner.nextFloat(), scanner.nextFloat(), scanner.nextFloat());
+                    System.out.println("\n");
                     break;
                 case 3:
                     System.out.println("Enter three Value of String to Find Max Value");
                     //calling CalculateMax generic funtion to calculate the maximum value
-                    System.out.println("The Maximum String Value " + calculateMax(scanner.next(), scanner.next(), scanner.next())+"\n");
+                    GenericClass stringValue =  new GenericClass(scanner.next(), scanner.next(), scanner.next());
+                    System.out.println("\n");
                     break;
                 case 4:
                     System.exit(0);
@@ -43,23 +46,23 @@ public class MaximumNumber
     /*
     Generic Method to Calculate The Maximum Value of Any Type
      */
-    static <E extends Comparable> E calculateMax(E a , E b , E c)
-    {
-        if (a.compareTo(b) > 0 && a.compareTo(c) > 0)
-        {
-            return a;
-        }
-        else if (b.compareTo(c) > 0 && b.compareTo(a) > 0)
-        {
-            return b;
-        }
-        else if (c.compareTo(a) > 0 && c.compareTo(b) > 0)
-        {
-            return c;
-        }
-        else
-        {
-            return null;
-        }
-    }
+//    static <E extends Comparable> E calculateMax(E a , E b , E c)
+//    {
+//        if (a.compareTo(b) > 0 && a.compareTo(c) > 0)
+//        {
+//            return a;
+//        }
+//        else if (b.compareTo(c) > 0 && b.compareTo(a) > 0)
+//        {
+//            return b;
+//        }
+//        else if (c.compareTo(a) > 0 && c.compareTo(b) > 0)
+//        {
+//            return c;
+//        }
+//        else
+//        {
+//            return null;
+//        }
+//    }
 }
