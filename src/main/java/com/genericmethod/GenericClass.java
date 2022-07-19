@@ -9,16 +9,25 @@ Generic Type
 
 class GenericClass
 {
+    /*
+    NoArgsConstructor
+    */
     GenericClass()
     {
 
     }
 
+    /*
+    Parameterized Constructor with three Generic Arguments
+     */
     <E extends Comparable> GenericClass(E a , E b , E c)
     {
         System.out.println("The Maximum Value is " +  testMaximum(a,b,c));
     }
 
+    /*
+    TestMaximum Function to calculate the Maximum Value of a Selected Dataype
+     */
     static <E extends Comparable> E testMaximum(E a , E b , E c)
     {
         if (a.compareTo(b) > 0 && a.compareTo(c) > 0)

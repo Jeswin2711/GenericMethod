@@ -12,6 +12,9 @@ public class MaximumNumber extends GenericClass
         Scanner scanner = new Scanner(System.in);
         System.out.println("Finding Maximum Number Using Generics");
         System.out.println("-------------------------------------\n");
+        /*
+        Code for Asking User to find Max value of a Specific Data Type
+         */
         while (true) {
             System.out.println("Enter 1 for INTEGER");
             System.out.println("Enter 2 for FLOAT");
@@ -43,26 +46,4 @@ public class MaximumNumber extends GenericClass
             }
         }
     }
-    /*
-    Generic Method to Calculate The Maximum Value of Any Type
-     */
-//    static <E extends Comparable> E calculateMax(E a , E b , E c)
-//    {
-//        if (a.compareTo(b) > 0 && a.compareTo(c) > 0)
-//        {
-//            return a;
-//        }
-//        else if (b.compareTo(c) > 0 && b.compareTo(a) > 0)
-//        {
-//            return b;
-//        }
-//        else if (c.compareTo(a) > 0 && c.compareTo(b) > 0)
-//        {
-//            return c;
-//        }
-//        else
-//        {
-//            return null;
-//        }
-//    }
 }
