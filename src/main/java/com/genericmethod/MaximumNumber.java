@@ -1,6 +1,6 @@
 package com.genericmethod;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class MaximumNumber extends GenericClass
 {
@@ -19,7 +19,8 @@ public class MaximumNumber extends GenericClass
             System.out.println("Enter 1 for INTEGER");
             System.out.println("Enter 2 for FLOAT");
             System.out.println("Enter 3 for STRING");
-            System.out.println("Enter 4 for EXIT");
+            System.out.println("Enter 4 to give More than 3 Parameters");
+            System.out.println("Enter 5 for EXIT");
             int input = scanner.nextInt();
             switch (input) {
                 case 1:
@@ -41,6 +42,60 @@ public class MaximumNumber extends GenericClass
                     System.out.println("\n");
                     break;
                 case 4:
+                    /*
+                    Case to give more than 3 values and find which Number is Maximum
+                     */
+                    while (true)
+                    {
+                        System.out.println("Enter 1 for INTEGER");
+                        System.out.println("Enter 2 for FLOAT");
+                        System.out.println("Enter 3 for STRING");
+                        input = scanner.nextInt();
+                        switch (input)
+                        {
+                            case 1:
+                                System.out.println("Enter No of Parameters");
+                                int size = scanner.nextInt();
+                                List<Integer> arrayInt = new ArrayList<Integer>(size);
+                                for(int i = 0 ; i < size ; i++)
+                                {
+                                    Integer n = scanner.nextInt();
+                                    arrayInt.add(n);
+                                }
+                                GenericClass integerVal = new GenericClass(arrayInt);
+                                break;
+                            case 2:
+                                System.out.println("Enter No of Parameters");
+                                size = scanner.nextInt();
+                                System.out.println("Enter the Values");
+                                List<String> arrayFloat = new ArrayList<String>(size);
+                                //calling CalculateMax generic funtion to calculate the maximum value
+                                for(int i = 0 ; i < size ; i++)
+                                {
+                                    String n = scanner.next();
+                                    arrayFloat.add(n);
+                                }
+                                GenericClass floatVal = new GenericClass(arrayFloat);
+                                break;
+                            case 3 :
+                                System.out.println("Enter No of Parameters");
+                                size = scanner.nextInt();
+                                List<String> arrayString = new ArrayList<String>(size);
+                                System.out.println("Enter the Values");
+                                for(int i = 0 ; i < size ; i++)
+                                {
+                                    String n = scanner.next();
+                                    arrayString.add(n);
+                                }
+                                GenericClass stringVal = new GenericClass(arrayString);
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    }
+                    break;
+                case 5:
                     System.exit(0);
                     break;
             }
